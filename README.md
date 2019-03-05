@@ -28,6 +28,7 @@ A user should be able to see a list of the messages posted by all the people the
 - [x] Functional tests: Spock, Groovy, Spring Mock MVC
 - [x] Application architecture - MVC & [Ports-And-Adapters](https://spin.atomicobject.com/2013/02/23/ports-adapters-software-architecture/)
 - [x] Solution time: 2 days - most of the time I spent on writing tests
+- [x] Added Actuator - just for fun
 
 ## Running application locally
 
@@ -38,13 +39,16 @@ A user should be able to see a list of the messages posted by all the people the
 #### Load postman collection from postman_collection folder
 ![Post man view](img/postman.png)
 
-#### Requests examples ready to play with on localhost
+#### Requests examples ready to play with on localhost, port 8080
 
 - http://localhost:8080/create_post/username1
 - http://localhost:8080/create_post/username2
 - http://localhost:8080/follow/username1/username2
 - http://localhost:8080/wall/username1
 - http://localhost:8080/timeline/username1
+
+Actuator - mappings:
+- http://localhost:8080/actuator/mappings
 
 
 #### Test coverage report

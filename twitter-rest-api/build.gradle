@@ -12,7 +12,8 @@ bootJar {
 dependencies {
     compile project(':twitter-domain')
     compile project(':twitter-repo')
-    compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+    compile "org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}"
     compile 'org.slf4j:slf4j-api:1.7.25'
     testCompile "org.spockframework:spock-spring:${spockVersion}"
     testCompile 'org.springframework.boot:spring-boot-starter-test'
