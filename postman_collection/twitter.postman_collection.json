@@ -8,14 +8,35 @@
 		{
 			"name": "user1 creates post",
 			"request": {
-				"method": "GET",
-				"header": [],
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\n\t\"message\": \"This message send by username1\"\n}"
 				},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/create_post/username1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"create_post",
+						"username1"
+					]
 				}
 			},
 			"response": []
@@ -23,14 +44,34 @@
 		{
 			"name": "user2 creates post",
 			"request": {
-				"method": "GET",
-				"header": [],
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\n\t\"message\": \"This message send by username2\"\n}"
 				},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/create_post/username2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"create_post",
+						"username2"
+					]
 				}
 			},
 			"response": []
@@ -39,13 +80,28 @@
 			"name": "user1 wall",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/wall/username1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wall",
+						"username1"
+					]
 				}
 			},
 			"response": []
@@ -60,7 +116,16 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/timeline/username1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"timeline",
+						"username1"
+					]
 				}
 			},
 			"response": []
@@ -75,7 +140,17 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/follow/username1/username2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"follow",
+						"username1",
+						"username2"
+					]
 				}
 			},
 			"response": []
