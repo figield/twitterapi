@@ -1,0 +1,8 @@
+apply plugin: 'io.spring.dependency-management'
+
+dependencies {
+    compile project(':twitter-domain')
+    testCompile 'com.github.javafaker:javafaker:0.16'
+    
+
+}

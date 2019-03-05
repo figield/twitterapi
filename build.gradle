@@ -1,0 +1,44 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+allprojects {
+	group 'com'
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '4.10.2'
+}
+
+
+subprojects {
+	
+	apply plugin: 'groovy'
+	apply plugin: 'java'
+	apply plugin: 'jacoco'
+
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		compile "org.codehaus.groovy:groovy-all:2.4.15"
+		compile 'org.slf4j:slf4j-api:1.7.25'
+		compileOnly "org.projectlombok:lombok:1.18.2"
+		testCompile "org.spockframework:spock-core:${spockVersion}"
+	}
+
+	test {
+		testLogging {
+			showStandardStreams = true
+		}
+	}
+}

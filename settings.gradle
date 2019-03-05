@@ -1,0 +1,5 @@
+rootProject.name = 'cats'
+include 'twitter-domain'
+include 'twitter-rest-api'
+include 'twitter-repo'
+
