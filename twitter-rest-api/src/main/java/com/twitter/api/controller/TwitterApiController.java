@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
@@ -31,20 +30,17 @@ public class TwitterApiController {
 
     final TwitterStorageService twitterStorageService;
 
-    @RequestMapping("/domain-health")
-    @GetMapping()
+    @GetMapping("/domain-health")
     public String domainHealthCheck() {
         return twitterService.health();
     }
 
-    @RequestMapping("/repository-health")
-    @GetMapping()
+    @GetMapping("/repository-health")
     public String repositoryHealthCheck() {
         return twitterStorageService.health();
     }
 
-    @RequestMapping("/rest-health")
-    @GetMapping()
+    @GetMapping("/rest-health")
     public String restHealthCheck() {
         return "Twitter REST API is up and running";
     }
