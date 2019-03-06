@@ -29,6 +29,7 @@ A user should be able to see a list of the messages posted by all the people the
 - [x] Application architecture - MVC & [Ports-And-Adapters](https://spin.atomicobject.com/2013/02/23/ports-adapters-software-architecture/)
 - [x] Solution time: 2 days - most of the time I spent on writing tests
 - [x] Added Actuator - just for fun
+- [x] Deploy application on [AWS](http://cats.eu-west-1.elasticbeanstalk.com/actuator/mappings) - use this address in POSTMAN for proper POST request handling
 
 ## Running application locally
 
